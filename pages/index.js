@@ -3,6 +3,11 @@ import { login } from "../components/AuthController";
 export default function Home() {
   return (
     <div>
+      <style jsx>{`
+        p {
+          color: red;
+        }
+      `}</style>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus minus
         soluta amet maiores, ratione autem voluptates illo consequuntur officia
