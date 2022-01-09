@@ -34,16 +34,27 @@ const clientCredentials = {
 // }
 
 // latest : v9
+let analytics;
 if (!getApps().length) {
   const app = initializeApp(clientCredentials);
   if (typeof window !== "undefined") {
     // Enable analytics. https://firebase.google.com/docs/analytics/get-started
     if ("measurementId" in clientCredentials) {
-      const analytics = getAnalytics(app);
+      const analytics2 = getAnalytics(app);
+      analytics = analytics2;
     }
   }
 }
 
 const db = getFirestore();
 
-export { db, getFirestore, collection, addDoc, query, where, getDocs };
+export {
+  db,
+  getFirestore,
+  collection,
+  addDoc,
+  query,
+  where,
+  getDocs,
+  analytics,
+};
